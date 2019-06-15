@@ -1,0 +1,136 @@
+/*------------------------------------*\
+  #ELEMENTS
+\*------------------------------------*/
+
+html {
+  font-family: var(--main-font);
+  font-size: var(--font-size-small);
+}
+
+body {
+  background-color: var(--background-color);
+  transition: background-color 0.3s;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--main-font-color);
+  color: var(--main-white-color);
+}
+
+/*------------------------------------*\
+  #HEADINGS
+\*------------------------------------*/
+
+h1 {
+  font-family: var(--secondary-font);
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--main-font-color);
+}
+
+h2 {
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--main-font-color);
+}
+
+h3 {
+  font-family: var(--main-font);
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--main-font-color);
+}
+
+/*------------------------------------*\
+  #BUTTONS AND LINKS
+\*------------------------------------*/
+
+button {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 25px 10px 25px;
+  border-radius: 10px;
+  background-color: var(--main-white-color);
+  border: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+}
+
+a {
+  color: var(--main-font-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#menuContainerFullWidth a > span {
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  background-size: 200% 2px;
+  background-image: linear-gradient(to right, transparent 50%, var(--accent-color) 50%);
+  -webkit-transition: background-position 0.3s;
+  -moz-transition: background-position 0.3s;
+  transition: background-position 0.3s;
+}
+
+#menuContainerCollapsed a > span {
+  background-repeat: repeat-y;
+  background-position: top left;
+  background-size: 2px 200%;
+  background-image: linear-gradient(to bottom, transparent 50%, var(--accent-color) 50%);
+  -webkit-transition: background-position 0.3s;
+  -moz-transition: background-position 0.3s;
+  transition: background-position 0.3s;
+}
+
+#menuContainerFullWidth a:hover > span {
+  background-position: -100% 100%;
+}
+
+#menuContainerCollapsed a:hover > span {
+  background-position: 0% -100%;
+}
+
+@media only screen and (min-width: 640px) {
+  /* a > span {
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, transparent 50%, var(--accent-color) 50%);
+    -webkit-transition: background-position 0.3s;
+    -moz-transition: background-position 0.3s;
+    transition: background-position 0.3s;
+  } */
+
+  #menuContainerCollapsed a > span {
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    background-size: 200% 2px;
+    background-image: linear-gradient(to right, transparent 50%, var(--accent-color) 50%);
+    -webkit-transition: background-position 0.3s;
+    -moz-transition: background-position 0.3s;
+    transition: background-position 0.3s;
+  }
+
+  #menuContainerCollapsed a:hover > span {
+    background-position: -100% 100%;
+  }
+
+}
+
+
+/*------------------------------------*\
+  #INPUT-FIELDS
+\*------------------------------------*/

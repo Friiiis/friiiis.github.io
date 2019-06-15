@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+:root {
+	/**
+     * #COLORS
+     */
+	--main-font-color: #414141;
+	--main-white-color: #fbfbfb;
+
+	--background-color: var(--main-font-color);
+  --accent-color: rgb(235, 177, 32);
+
+	--box-shadow-color: var(--box-shadow-dark);
+
+	--box-shadow-dark: rgba(33, 33, 33, 0.75);
+	--box-shadow-light: rgba(73, 73, 73, 0.4);
+
+	/**
+     * #FONTS
+     */
+	--main-font:      'Open Sans', sans-serif;
+	--secondary-font: 'Ubuntu', sans-serif; /*Headings*/
+
+	--font-size-large:  42px;
+	--font-size-medium: 20px;
+	--font-size-small:  16px;
+
+	/**
+   * #WIDTHS-HEIGHTS-OFFSETS
+   */
+  --tiny-margin: 5px;
+  --small-margin: 10px;
+  --medium-margin: 20px;
+
+  --input-field-height: 20px;
+
+	/*
+	 * #PORTFOLIO COLORS
+	 */
+	 --portfolio-1-color: var(--accent-color);
+	 --portfolio-2-color: #1a9f49;
+	 --portfolio-3-color: rgb(161, 161, 161);
+}

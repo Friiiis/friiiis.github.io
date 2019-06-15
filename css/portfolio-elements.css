@@ -1,0 +1,108 @@
+.portfolio-1 {
+  background-color: var(--portfolio-1-color);
+}
+
+.portfolio-2 {
+  background-color: var(--portfolio-2-color);
+}
+
+.portfolio-3 {
+  background-color: var(--portfolio-3-color);
+}
+
+.slideOutPortfolio {
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.20);
+  transition: all 0.3s;
+  color: var(--main-white-color)
+}
+
+.slideOutPortfolio:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.40);
+}
+
+.slideOutPortfolio .fas {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.portfolioElementContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.portfolioElementContainer h1, h2, h3 {
+  color: var(--main-white-color);
+}
+
+.portfolioElementContainer h1 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.portfolioRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.portfolioRow .fab, .fas {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 640px) {
+  .portfolioElementContainer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .portfolioElementContainer {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.tech {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Tooltip text */
+.tech .tooltiptext {
+  visibility: hidden;
+  width: 75px;
+  background-color: rgba(0, 0, 0, 0.50);
+  color: var(--main-white-color);
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 6px;
+  margin-left: -48px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tech:hover .tooltiptext {
+  visibility: visible;
+}
