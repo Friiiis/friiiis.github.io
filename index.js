@@ -1,3 +1,8 @@
+// import { html } from './pages/about/index';
+
+// html()
+//   .then(response => console.log(response));
+
 //https://stackoverflow.com/questions/17847049/css3-custom-animation-triggering-after-hover
 var portfolioPage = document.getElementById('portfolioPage').textContent;
 var aboutPage = document.getElementById('aboutPage').textContent;
