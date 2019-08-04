@@ -10,11 +10,11 @@
 	--main-white-color: #fbfbfb;
 
 	--background-color: var(--main-font-color);
-  --accent-color: rgb(235, 177, 32);
+  	--accent-color: rgb(235, 177, 32);
 
 	--box-shadow-color: var(--box-shadow-dark);
 
-	--box-shadow-dark: rgba(33, 33, 33, 0.75);
+	--box-shadow-dark: rgba(33, 33, 33, 0.5);
 	--box-shadow-light: rgba(73, 73, 73, 0.4);
 
 	/**
@@ -37,9 +37,10 @@
   --input-field-height: 20px;
 
 	/*
-	 * #PORTFOLIO COLORS
-	 */
-	 --portfolio-1-color: var(--accent-color);
-	 --portfolio-2-color: #1a9f49;
-	 --portfolio-3-color: rgb(161, 161, 161);
+	* #PORTFOLIO COLORS
+	*/
+	--portfolio-portfolio-color: var(--accent-color);
+	--portfolio-mettelineM-color: #1a9f49;
+	--portfolio-savedPostsOrganizer-color: #EF452C;
+	--portfolio-bottomNav-color: #9cc7dc;
 }

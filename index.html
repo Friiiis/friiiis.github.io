@@ -23,7 +23,7 @@
   <div class="contentContainer" id="upperContentContainer">
     <div class="slideOutPortfolio" onclick="slideOutPortfolio(true)">
       <i class="fas fa-chevron-right"></i>
-      BACK
+      <p>BACK</p>
     </div>
     <div class="portfolioElementContainer" id="upperContent"></div>
   </div>
@@ -31,7 +31,7 @@
   <div class="menuContainer" id="menuContainerFullWidth">
     <div class="headerContainer">
       <span>
-        <div class="logoContainer" onclick="changePage(0)">
+        <div class="logoContainer" onclick="changePage('home')">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -49,127 +49,24 @@
     </div>
 
     <nav class="menuLinks">
-      <a onclick="changePage(0)"><span>Home</span></a>
-      <a onclick="changePage(1)"><span>Portfolio</span></a>
-      <a onclick="changePage(2)"><span>About</span></a>
+      <a onclick="changePage('home')"><span>Home</span></a>
+      <a onclick="changePage('portfolio')"><span>Portfolio</span></a>
+      <a onclick="changePage('about')"><span>About</span></a>
     </nav>
 
     <div class="iconContainer" id="iconContainer">
       <a class="icon" href="https://github.com/Friiiis" target="_blank"><i class="fab fa-github"></i></a>
       <a class="icon" href="https://www.linkedin.com/in/gustav-friis-hansen-61351216b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a class="icon" href="mailto:gustav@friis-hansen.dk"><i class="fas fa-envelope"></i></a>
+      <a class="icon" href="mailto:friisdeveloper@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
 
     <noscript>Your browser does not support JavaScript. This application needs JavaScript enabled to show additional content.</noscript>
 
   </div>
 
-
-  <script id="portfolioPage" type="text/template">
-    <div class="portfolioContent content" id="portfolioContent">
-
-      <div class="portfolioColumn">
-        <div class="portfolioElement portfolio-1" onclick="portfolioElementClicked('1')">
-          <img src="images/portfolio/portfolio_screenshot.jpg" class="portfolioImage">
-          <h1 class="portfolioText">Webpage:<br>Portfolio</h1>
-        </div>
-        <div class="portfolioElement portfolio-3" onclick="portfolioElementClicked('3')">
-          <img src="images/lixen/lixen.png" class="portfolioImage">
-          <h1 class="portfolioText">Webpage:<br>University newspaper</h1>
-        </div>
-      </div>
-
-      <div class="portfolioColumn">
-        <div class="portfolioElement portfolio-2" onclick="portfolioElementClicked('2')">
-          <img src="images/mettelinem/figur_lille.jpg" class="portfolioImage">
-          <h1 class="portfolioText">Logo and brand design:<br>MettelineM</h1>
-        </div>
-      </div>
-
-    </div>
-	</script>
-
-  <script id="portfolio-1" type="text/template">
-    <div>
-      <h1>Portfolio</h1>
-      <h2>A page to display my works and skills.</h2>
-      <h1>Case:</h1>
-      <h3>Build a beautiful and minimalistic site, to showcase my works, skills and ideas. The portfolio will be used when applying for regular and freelance jobs.
-        <br><br>My requirements for the page was, that it should be build with vanilla HTML, CSS and JavaScript, and that it should be responsive and nice to use on any device.</h3>
-      <div class="portfolioRow">
-        <div class="tech">
-          <img src="images/techs/html.png" class="tech">
-          <span class="tooltiptext">HTML5</span>
-        </div>
-        <div class="tech">
-          <img src="images/techs/css.png" class="tech">
-          <span class="tooltiptext">CSS3</span>
-        </div>
-        <div class="tech">
-          <img src="images/techs/javascript.png" class="tech">
-          <span class="tooltiptext">JavaScript</span>
-        </div>
-      </div>
-      <div class="portfolioRow">
-        <button onclick="changePage(0)">
-          <i class="fas fa-link"></i>
-          Link
-        </button>
-        <button onclick="window.open('https://github.com/Friiiis/portfolio')">
-          <i class="fab fa-github-square"></i>
-          Github
-        </button>
-      </div>
-    </div>
-  </script>
-
-  <script id="portfolio-2" type="text/template">
-    <div>
-      <h1>MettelineM</h1>
-      <h2>Personal trainer and fitness instructor.</h2>
-      <h1>Case:</h1>
-      <h3>Designing the logo and brand of a fitness startup. Additionally the client needed business cards and stickers.</h3>
-      <div class="portfolioRow">
-        <div class="tech">
-          <img src="images/techs/illustrator.png" class="tech">
-          <span class="tooltiptext">Illustrator</span>
-        </div>
-      </div>
-    </div>
-  </script>
-
-  <script id="portfolio-3" type="text/template">
-    <div>
-      <h1>Lixen</h1>
-      <h2>University newspaper for students studying journalism at Syddansk Universitet.</h2>
-      <h1>Case:</h1>
-      <h3>The newspaper wanted a new website for their articles. The site should be made in WordPress, as their previous site had been.</h3>
-      <div class="portfolioRow">
-        <div class="tech">
-          <img src="images/techs/wordpress.png" class="tech">
-          <span class="tooltiptext">Wordpress</span>
-        </div>
-      </div>
-      <div class="portfolioRow">
-        <button onclick="window.open('http://www.lixen.dk')">
-          <i class="fas fa-link"></i>
-          Link
-        </button>
-      </div>
-    </div>
-  </script>
-
-  <script id="aboutPage" type="text/template">
-    <div class="aboutContent content">
-      <img src="images/about/gustav-friis-hansen.jpg" class="aboutImage">
-      <h1 class="aboutHeader">Webpages. Mobile apps. <span>Beautiful</span> designs.</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Potenti nullam ac tortor vitae purus faucibus ornare. Nec feugiat nisl pretium fusce id velit ut tortor. Convallis tellus id interdum velit laoreet id donec.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed augue lacus viverra vitae congue eu consequat ac. Proin sed libero enim sed faucibus turpis. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Elit sed vulputate mi sit amet.</p>
-    </div>
-	</script>
-
   <!-- Reference til JavaScript filen -->
-	<script src="index.js"></script>
+  <script src="index.js" type="module"></script>
+
 </main>
 </body>
 </html>

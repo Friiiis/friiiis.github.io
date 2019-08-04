@@ -126,6 +126,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  transition: transform .5s;
 }
 
 #upperContentContainer {
@@ -235,10 +236,11 @@
 .portfolioElement {
   position: relative;
   width: 100%;
-  min-height: 100px;
+  min-height: 175px;
   margin: 15px;
-  box-shadow: 0px 0px 8px 5px var(--box-shadow-color);
+  /* box-shadow: 0px 0px 8px 5px var(--box-shadow-color); */
   text-align: center;
+  border-radius: 15px;
 }
 
 .portfolioElement:hover {
@@ -250,13 +252,14 @@
   transition: all 0.5s;
   /*Negativ margin her, fixer 3px for meget under billedet*/
   margin-bottom: -3px;
+  border-radius: 15px;
 }
 
 .portfolioText {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -65%);
   color: white;
   font-weight: bold;
   opacity: 0;
@@ -290,7 +293,7 @@
 
 .aboutContent {
   background-color: var(--main-white-color);
-  box-shadow: 0px 0px 8px 5px var(--box-shadow-color);
+  /* box-shadow: 0px 0px 8px 5px var(--box-shadow-color); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,6 +303,7 @@
   margin-top: 15px;
   margin-bottom: 15px;
   width: 80%;
+  border-radius: 20px;
 }
 
 .aboutImage {
