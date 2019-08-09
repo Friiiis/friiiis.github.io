@@ -6,6 +6,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 10;
   height: 100vh;
   background-color: var(--main-white-color);
   box-shadow: 0px 0px 8px 5px var(--box-shadow-color);
@@ -129,8 +130,13 @@
   transition: transform .5s;
 }
 
+#contentContainer {
+  z-index: 0;
+}
+
 #upperContentContainer {
   top: 0px;
+  z-index: 5;
   transform: translate(100%, 0px);
   display: none;
   transition: transform .5s;
@@ -272,6 +278,20 @@
 
 .portfolioElement:hover > .portfolioText {
   opacity: 1;
+}
+
+.portfolioPageImage {
+  max-width: 75%;
+  max-height: 500px;
+  margin: 10px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.portfolioPageLink {
+  color: var(--main-white-color);
+  font-weight: normal;
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 1025px) {
