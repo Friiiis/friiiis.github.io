@@ -10,7 +10,7 @@ var upperContent = document.getElementById('upperContent');
 var loadingProgress = 0;
 
 function addToLoadingProgress(params) {
-  loadingProgress = loadingProgress + (100/6);
+  loadingProgress = loadingProgress + (100/7);
   console.log(loadingProgress);
 }
 
@@ -68,6 +68,12 @@ function getAllContent(params) {
       getPortfolioSubPage("bottomNav")
         .then((html) => {
           portfolioSubPages.bottomNav = html; 
+          addToLoadingProgress();
+          isLoadingFinished() ? resolve() : console.log("still loading...");
+        });
+        getPortfolioSubPage("mikkeller")
+        .then((html) => {
+          portfolioSubPages.mikkeller = html; 
           addToLoadingProgress();
           isLoadingFinished() ? resolve() : console.log("still loading...");
         });
