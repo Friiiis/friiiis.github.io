@@ -51,7 +51,6 @@ async function setWorks() {
     var template = document.getElementById("work-block");
 
     works.works.forEach(w => {
-      console.log(w);
 
       // Kloner template
       var clone = template.content.cloneNode(true);
@@ -98,8 +97,6 @@ async function setWorks() {
       link.setAttribute("href", w.link.link);
       link.style.backgroundImage = "linear-gradient(to right, transparent 50%, " + w.color + " 50%)";
 
-      console.log(link);
-      
       container.appendChild(clone);
     });
     
