@@ -44,8 +44,8 @@
             "color": "#9bbbf3",
             "fontColor": "white",
             "link": {
-                "name": "Github",
-                "link": "https://github.com/Friiiis/slide_to_confirm"
+                "name": "pub.dev",
+                "link": "https://pub.dev/packages/slide_to_confirm"
             },
             "techs": [
                 "Dart",
@@ -61,15 +61,14 @@
             "color": "#fbc3c3",
             "fontColor": "white",
             "link": {
-                "name": "Github",
-                "link": "https://github.com/Friiiis/minimalistic_bottom_navigation"
+                "name": "pub.dev",
+                "link": "https://pub.dev/packages/minimalistic_bottom_navigation"
             },
             "techs": [
                 "Dart",
                 "Flutter"
             ]
-        }
-        ,
+        },
         {
             "id": "interactive_map",
             "title": "Interactive map of Denmark",
@@ -85,6 +84,23 @@
             "techs": [
                 "Java",
                 "JavaFX"
+            ]
+        },
+        {
+            "id": "davoserjas",
+            "title": "Point counter for Davoserjas",
+            "type": "Personal project",
+            "description": "A mobile app for keeping track of the score while playing the Danish card game \"Davoserjas\". The app is created in the cross-platform framework Flutter, but is only published for Android phones.",
+            "image": "/assets/images/davoserjas.jpg",
+            "color": "#6a1b9a",
+            "fontColor": "white",
+            "link": {
+                "name": "Github",
+                "link": "https://github.com/Friiiis/davoserjas"
+            },
+            "techs": [
+                "Dart",
+                "Flutter"
             ]
         }
     ]
