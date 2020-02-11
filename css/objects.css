@@ -61,7 +61,7 @@
 .name-header {
   color: black;
   font-family: HeyOctober;
-  font-size: 75px;
+  font-size: var(--font-size-huge);
   transform: rotate(-20deg);
 }
 
@@ -75,7 +75,7 @@
 }
 
 .skills-container p {
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
   line-height: 110%;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .work-button {
-  background-color: #ef452c;
+  /* background-color: #ef452c; */
 }
 
 .work-title-below-image {
@@ -137,6 +137,10 @@
 
 .work-content {
   padding: 10px;
+}
+
+.work-techs {
+  font-size: var(--font-size-x-small);
 }
 
 .work-link {

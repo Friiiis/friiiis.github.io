@@ -3,53 +3,48 @@
 \*------------------------------------*/
 
 @font-face {
-	font-family: LouisGeorgeCafe;
-	src:url("/assets/fonts/Louis\ George\ Cafe.ttf");
+  font-family: LouisGeorgeCafe;
+  src: url("/assets/fonts/Louis\ George\ Cafe.ttf");
 }
 
 @font-face {
-	font-family: LouisGeorgeCafe-bold;
-	src:url("/assets/fonts/Louis\ George\ Cafe\ Bold.ttf");
+  font-family: LouisGeorgeCafe-bold;
+  src: url("/assets/fonts/Louis\ George\ Cafe\ Bold.ttf");
 }
 
 @font-face {
-	font-family: LouisGeorgeCafe-light;
-	src:url("/assets/fonts/Louis\ George\ Cafe\ Light.ttf");
+  font-family: LouisGeorgeCafe-light;
+  src: url("/assets/fonts/Louis\ George\ Cafe\ Light.ttf");
 }
 
 @font-face {
-	font-family: HeyOctober;
-	src:url("/assets/fonts/Hey_October.ttf");
+  font-family: HeyOctober;
+  src: url("/assets/fonts/Hey_October.ttf");
 }
 
 :root {
-	/**
+  /**
      * #COLORS
      */
-	--main-font-color: #fbfbfb;
-	--main-white-color: #fbfbfb;
-	--main-black-color: #111111;
+  --main-font-color: #fbfbfb;
+  --main-white-color: #fbfbfb;
+  --main-black-color: #111111;
 
-	--background-color: var(--main-font-color);
-  	--accent-color: crimson;
-
-	--box-shadow-color: var(--box-shadow-dark);
-
-	--box-shadow-dark: rgba(33, 33, 33, 0.5);
-	--box-shadow-light: rgba(73, 73, 73, 0.4);
-
-	/**
+  /**
      * #FONTS
      */
-	--main-font:      'LouisGeorgeCafe', sans-serif;
-	--main-font-bold:      'LouisGeorgeCafe-bold', sans-serif;
-	--secondary-font: 'Ubuntu', sans-serif; /*Headings*/
+  --main-font: "LouisGeorgeCafe", sans-serif;
+  --main-font-bold: "LouisGeorgeCafe-bold", sans-serif;
 
-	--font-size-large:  42px;
-	--font-size-medium: 20px;
-	--font-size-small:  16px;
+  --font-size-huge: 75px;
+  --font-size-large: 28px;
+  --font-size-medium-large: 26px;
+  --font-size-medium: 24px;
+  --font-size-small-medium: 18px;
+  --font-size-small: 16px;
+  --font-size-x-small: 13px;
 
-	/**
+  /**
    * #WIDTHS-HEIGHTS-OFFSETS
    */
   --tiny-margin: 5px;
@@ -57,5 +52,16 @@
   --medium-margin: 20px;
 
   --input-field-height: 20px;
+}
 
+@media only screen and (min-width: 1920px) {
+  :root {
+    --font-size-huge: 112px;
+    --font-size-large: 42px;
+    --font-size-medium-large: 39px;
+    --font-size-medium: 36px;
+    --font-size-small-medium: 27px;
+	--font-size-small: 24px;
+	--font-size-x-small: 18px;
+  }
 }

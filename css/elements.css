@@ -45,7 +45,7 @@ div {
 
 h1 {
   font-family: var(--main-font);
-  font-size: 28px;
+  font-size: var(--font-size-large);
   margin-top: 10px;
   margin-bottom: 20px;
   color: var(--main-font-color);
@@ -53,7 +53,7 @@ h1 {
 
 h2 {
   font-family: var(--main-font);
-  font-size: 24px;
+  font-size: var(--font-size-medium-large);
   margin-bottom: 20px;
   color: var(--main-font-color);
 }
@@ -61,7 +61,7 @@ h2 {
 h3 {
   font-family: var(--main-font-bold);
   font-weight: lighter;
-  font-size: 25px;
+  font-size: var(--font-size-medium);
   margin-bottom: 20px;
   color: var(--main-font-color);
 }
@@ -69,15 +69,15 @@ h3 {
 h4 {
   font-family: var(--main-font-bold);
   font-weight: bolder;
-  font-size: 18px;
-  margin-top: 15px;
+  font-size: var(--font-size-small-medium);
+  margin-top: 25px;
   margin-bottom: 10px;
   color: var(--main-font-color);
 }
 
 h5 {
   font-family: var(--main-font);
-  font-size: 16px;
+  font-size: var(--font-size-small);
   margin-bottom: 15px;
   font-style: italic;
   color: var(--main-font-color);
@@ -101,7 +101,7 @@ nav {
 
 nav a {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: var(--font-size-small);
   padding: 0 5px 0 5px;
 }
 
@@ -113,7 +113,7 @@ a, a:visited {
   background-repeat: repeat-x;
   background-position: bottom left;
   background-size: 200% 5px;
-  background-image: linear-gradient(to right, transparent 50%, var(--accent-color) 50%);
+  background-image: linear-gradient(to right, transparent 50%, var(--main-black-color) 50%);
 }
 
 a:hover {
@@ -121,7 +121,3 @@ a:hover {
   color: var(--main-font-color);
   background-position: -100% 100%;
 }
-
-/*------------------------------------*\
-  #INPUT-FIELDS
-\*------------------------------------*/
