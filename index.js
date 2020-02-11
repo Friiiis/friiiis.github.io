@@ -93,9 +93,11 @@ async function setWorks() {
       }
 
       // Sætter linket og styler hover effekten
-      link.innerText = w.link.name;
-      link.setAttribute("href", w.link.link);
-      link.style.backgroundImage = "linear-gradient(to right, transparent 50%, " + w.color + " 50%)";
+      if (w.link.name != "none") {
+        link.innerText = w.link.name;
+        link.setAttribute("href", w.link.link);
+        link.style.backgroundImage = "linear-gradient(to right, transparent 50%, " + w.color + " 50%)";
+      }
 
       container.appendChild(clone);
     });

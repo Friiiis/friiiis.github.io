@@ -69,5 +69,23 @@
                 "Flutter"
             ]
         }
+        ,
+        {
+            "id": "interactive_map",
+            "title": "Interactive map of Denmark",
+            "type": "School project",
+            "description": "An interactive map of Denmark made with Java and JavaFX as part of the course \"First-year Project: Map of Denmark. Visualization, Navigation, Searching, and Route Planning\" at ITU. Made in collaboration with four classmates.",
+            "image": "/assets/images/interactive_map.jpg",
+            "color": "#87adf1",
+            "fontColor": "white",
+            "link": {
+                "name": "none",
+                "link": ""
+            },
+            "techs": [
+                "Java",
+                "JavaFX"
+            ]
+        }
     ]
 }
