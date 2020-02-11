@@ -118,6 +118,7 @@ a, a:visited {
 
 a:hover {
   text-decoration: none;
+  color: var(--main-font-color);
   background-position: -100% 100%;
 }
 
