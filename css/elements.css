@@ -5,25 +5,38 @@
 html {
   font-family: var(--main-font);
   font-size: var(--font-size-small);
+  scroll-behavior: smooth;
 }
 
 /* Sørger for at content ikke hopper, når scroll bar dukker op/forsvinder */
-@media screen and (min-width: 960px) {
+/*@media screen and (min-width: 960px) {
   #html {
       margin-left: calc(100vw - 100%);
       margin-right: 0;
   }
-}
+}*/
 
 body {
-  background-color: var(--background-color);
-  transition: background-color 0.3s;
   overflow-x: hidden;
+}
+
+footer {
+  /* background-color: var(--main-black-color); */
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  color: var(--main-font-color);
 }
 
 ::selection {
   background: var(--main-font-color);
-  color: var(--main-white-color);
+  color: black;
 }
 
 /*------------------------------------*\
@@ -31,117 +44,82 @@ body {
 \*------------------------------------*/
 
 h1 {
-  font-family: var(--secondary-font);
+  font-family: var(--main-font);
   font-size: 28px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: var(--main-font-color);
 }
 
 h2 {
-  font-family: var(--secondary-font);
+  font-family: var(--main-font);
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: var(--main-font-color);
 }
 
 h3 {
-  font-family: var(--main-font);
-  font-size: 20px;
+  font-family: var(--main-font-bold);
+  font-weight: lighter;
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: var(--main-font-color);
+}
+
+h4 {
+  font-family: var(--main-font-bold);
+  font-weight: bolder;
+  font-size: 18px;
+  margin-top: 15px;
   margin-bottom: 10px;
+  color: var(--main-font-color);
+}
+
+h5 {
+  font-family: var(--main-font);
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-style: italic;
   color: var(--main-font-color);
 }
 
 p {
   line-height: 150%;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+  margin-bottom: 20px;
 }
 
 /*------------------------------------*\
   #BUTTONS AND LINKS
 \*------------------------------------*/
 
-button {
-  display: flex;
-  flex-direction: row;
-  padding: 10px 25px 10px 25px;
-  border-radius: 10px;
-  background-color: var(--main-white-color);
-  border: 0;
-  margin-left: 10px;
-  margin-right: 10px;
-  align-items: center;
-  font-size: 14px;
-  transition: all 0.3s;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: rgb(226, 226, 226);
-}
-
-a {
+nav {
+  margin-bottom: 20px;
   color: var(--main-font-color);
-  font-weight: bold;
+}
+
+nav a {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 0 5px 0 5px;
+}
+
+a, a:visited {
+  color: var(--main-font-color);
   text-decoration: none;
+  font-weight: bold;
+  transition: background-position 0.5s;
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  background-size: 200% 5px;
+  background-image: linear-gradient(to right, transparent 50%, var(--accent-color) 50%);
 }
 
 a:hover {
-  cursor: pointer;
-}
-
-#menuContainerFullWidth a > span {
-  background-repeat: repeat-x;
-  background-position: bottom left;
-  background-size: 200% 2px;
-  background-image: linear-gradient(to right, transparent 50%, var(--accent-color) 50%);
-  -webkit-transition: background-position 0.3s;
-  -moz-transition: background-position 0.3s;
-  transition: background-position 0.3s;
-}
-
-#menuContainerCollapsed a > span {
-  background-repeat: repeat-y;
-  background-position: top left;
-  background-size: 2px 200%;
-  background-image: linear-gradient(to bottom, transparent 50%, var(--accent-color) 50%);
-  -webkit-transition: background-position 0.3s;
-  -moz-transition: background-position 0.3s;
-  transition: background-position 0.3s;
-}
-
-#menuContainerFullWidth a:hover > span {
+  text-decoration: none;
   background-position: -100% 100%;
 }
-
-#menuContainerCollapsed a:hover > span {
-  background-position: 0% -100%;
-}
-
-@media only screen and (min-width: 640px) {
-  /* a > span {
-    background-size: 200% 100%;
-    background-image: linear-gradient(to right, transparent 50%, var(--accent-color) 50%);
-    -webkit-transition: background-position 0.3s;
-    -moz-transition: background-position 0.3s;
-    transition: background-position 0.3s;
-  } */
-
-  #menuContainerCollapsed a > span {
-    background-repeat: repeat-x;
-    background-position: bottom left;
-    background-size: 200% 2px;
-    background-image: linear-gradient(to right, transparent 50%, var(--accent-color) 50%);
-    -webkit-transition: background-position 0.3s;
-    -moz-transition: background-position 0.3s;
-    transition: background-position 0.3s;
-  }
-
-  #menuContainerCollapsed a:hover > span {
-    background-position: -100% 100%;
-  }
-
-}
-
 
 /*------------------------------------*\
   #INPUT-FIELDS

@@ -1,0 +1,31 @@
+{
+    "frameworks": [
+        {
+            "title": "Web",
+            "data": [
+                "React",
+                "WordPress",
+                "Shopify",
+                "WebExtensions API",
+                "Bootstrap"
+            ]
+        },
+        {
+            "title": "Mobile",
+            "data": [
+                "Android",
+                "Flutter",
+                "React Native",
+                "Xamarin"
+            ]
+        },
+        {
+            "title": "Desktop",
+            "data": [
+                "Java Swing",
+                "JavaFX",
+                "Xamarin"
+            ]
+        }
+    ]
+}

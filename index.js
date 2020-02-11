@@ -1,193 +1,110 @@
-import { getAboutPage } from './pages/about/about.js';
-import { getPortfolioPage, getPortfolioSubPage } from './pages/portfolio/portfolio.js';
-
-//https://stackoverflow.com/questions/17847049/css3-custom-animation-triggering-after-hover
-
-var content = document.getElementById('contentContainer');
-var upperContentContainer = document.getElementById('upperContentContainer');
-var upperContent = document.getElementById('upperContent');
-
-var loadingProgress = 0;
-
-function addToLoadingProgress(params) {
-  loadingProgress = loadingProgress + (100/7);
-  console.log(loadingProgress);
-}
-
-// function getAllContent() {
-//   return new Promise(function (resolve, reject){
-//     getPortfolioPage()
-//       .then((html) => {pages.portfolio = html; addToLoadingProgress()})
-//       .then(() => getAboutPage()
-//         .then((html) => {pages.about = html; addToLoadingProgress()})
-//           .then(() => getPortfolioSubPage("portfolio"))
-//             .then((html) => {portfolioSubPages.portfolio = html; addToLoadingProgress()})
-//             .then(() => getPortfolioSubPage("mettelineM")
-//               .then((html) => {portfolioSubPages.mettelineM = html; addToLoadingProgress()})))
-//       .catch((e) => console.log(e))
-//   });
-// }
-
-function isLoadingFinished() {
-  return Math.round(loadingProgress) == 100;
-}
-
-function getAllContent(params) {
-  return new Promise((resolve, reject) => {
-    try {
-      getPortfolioPage()
-        .then((html) => {
-          pages.portfolio = html; 
-          addToLoadingProgress();
-          isLoadingFinished() ? resolve() : console.log("still loading...");
-        });
-      getAboutPage()
-        .then((html) => {
-          pages.about = html; 
-          addToLoadingProgress();
-          isLoadingFinished() ? resolve() : console.log("still loading...");
-        });
-      getPortfolioSubPage("portfolio")
-        .then((html) => {
-          portfolioSubPages.portfolio = html; 
-          addToLoadingProgress();
-          isLoadingFinished() ? resolve() : console.log("still loading...");
-        });
-      getPortfolioSubPage("mettelineM")
-        .then((html) => {
-          portfolioSubPages.mettelineM = html; 
-          addToLoadingProgress();
-          isLoadingFinished() ? resolve() : console.log("still loading...");
-        });
-      getPortfolioSubPage("savedPostsOrganizer")
-        .then((html) => {
-          portfolioSubPages.savedPostsOrganizer = html; 
-          addToLoadingProgress();
-          isLoadingFinished() ? resolve() : console.log("still loading...");
-        });
-      getPortfolioSubPage("bottomNav")
-        .then((html) => {
-          portfolioSubPages.bottomNav = html; 
-          addToLoadingProgress();
-          isLoadingFinished() ? resolve() : console.log("still loading...");
-        });
-        getPortfolioSubPage("mikkeller")
-        .then((html) => {
-          portfolioSubPages.mikkeller = html; 
-          addToLoadingProgress();
-          isLoadingFinished() ? resolve() : console.log("still loading...");
-        });
-    } catch (error) {
-      reject(error);
+async function setSkills() {
+  var languages = await fetch("/assets/data/skills/languages.json").then(
+    response => {
+      return response.json();
     }
-  })
-}
+  );
 
-getAllContent().then((response) => console.log("finished"));
-
-var pages = {
-  home: "",
-}
-
-var portfolioSubPages = {}
-
-var currentPage = "home";
-
-function changePage(n) {
-  if (currentPage == n) {
-    return;
-  }
-  startPageSlider(n);
-  currentPage = n;
-}
-
-function startPageSlider(navigateTo) {
-  slideOutPortfolio(false);
-
-  if (navigateTo === 'home') {    
-    //hvis der navigeres til forsiden
-    document.getElementById('menuContainerCollapsed').id = 'menuContainerFullWidth';
-
-    //sørger for at navn igen vises, hvis vi er tilbage på startskærmen
-    //document.getElementById('name').style.transform = "translate(0px, 0px)";
-    document.getElementById('name').style.opacity = 1;
-  } else {
-    //finder media width
-    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    if (width <= 1024) {
-      //smider navn ud af skærmen, hvis vi er på mobil, når startpage collapser
-      document.getElementById('name').style.opacity = 0;
+  var frameworks = await fetch("/assets/data/skills/frameworks.json").then(
+    response => {
+      return response.json();
     }
-    if (currentPage == "home") {
-      //hvis vi er på forsiden
-      content.innerHTML = pages[navigateTo];
-      document.getElementById('menuContainerFullWidth').id = 'menuContainerCollapsed';
-    } else {
-      //hvis vi ikke er på forsiden, og der skal navigeres til en anden side (som heller ikke er forsiden)
-      // document.getElementById('menuContainerCollapsed').id = 'menuContainerFullWidth';
-      // setTimeout(function () {
-      //   content.innerHTML = pages[navigateTo];
-      //   document.getElementById('menuContainerFullWidth').id = 'menuContainerCollapsed';
-      // }, 500);
+  );
 
-      //nuværende content glider ud af billedet
-      content.style.transform = "translate(0px, 100%)";
+  // Tilføjer alle sprog til div #languages-container
+  languages.languages.forEach(s => {
+    var container = document.getElementById("languages-container");
 
-      //når content er væk, glider den nye side ind
-      setTimeout(function () {
-        window.scroll(0,0);
-        document.getElementsByTagName("body")[0].style.overflowY = "hidden";
-        content.innerHTML = pages[navigateTo];
-        content.style.transform = "translate(0px, 0%)";
+    var p = document.createElement("p");
+    p.innerText = s;
 
-        setTimeout(() => {
-          document.getElementsByTagName("body")[0].style.overflowY = "auto";
-        }, 500);
-      }, 510);     
-    }
+    container.appendChild(p);
+  });
+
+  // Tilføjer alle frameworks til div #frameworks-container
+  frameworks.frameworks.forEach(f => {
+    var container = document.getElementById("frameworks-container");
+
+    var h4 = document.createElement("h4");
+    h4.innerText = f.title;
+    container.appendChild(h4);
+
+    f.data.forEach(fw => {
+      var p = document.createElement("p");
+      p.innerText = fw;
+      container.appendChild(p);
+    });
+  });
+}
+
+async function setWorks() {
+  var works = await fetch("/assets/data/works/works.json").then(response => {
+    return response.json();
+  });
+
+  var container = document.getElementById("all-work-container");
+
+  // Test to see if the browser supports the HTML template element by checking
+  // for the presence of the template element's content attribute.
+  if ("content" in document.createElement("template")) {
+
+    var template = document.getElementById("work-block");
+
+    works.works.forEach(w => {
+      console.log(w);
+
+      // Kloner template
+      var clone = template.content.cloneNode(true);
+
+      // Fanger alle elementer der skal ændres
+      var collapsible = clone.querySelector(".collapse");
+      var button = clone.querySelector("#work-button");
+      var image = clone.querySelector("#work-image");
+      var title01 = clone.querySelector("#work-title-01");
+      var title02 = clone.querySelector("#work-title-02");
+      var type = clone.querySelector("#work-type");
+      var description = clone.querySelector("#work-description");
+      var techs = clone.querySelector("#work-techs");
+      var link = clone.querySelector("#work-link");
+
+      // Sørger for at collapse har et unikt id og button peger på denne
+      collapsible.id = w.id;
+      button.setAttribute("data-target", "#" + w.id);
+
+      // Sætter baggrundsfarven
+      button.style.backgroundColor = w.color;
+
+      // Sætter billede
+      image.setAttribute("src", w.image);
+
+      // Sætter de to titler, typen og description
+      title01.innerText = w.title;
+      title01.style.color = w.fontColor;
+      title02.innerText = w.title;
+      type.innerText = w.type;
+      description.innerText = w.description;
+
+      // Sætter alle techs ind i samme div med en prik i mellem
+      techs.innerText = "";
+      for (let t = 0; t < w.techs.length; t++) {
+        if (t != 0) {
+          techs.innerText = techs.innerText + " ・ ";
+        }
+        techs.innerText = techs.innerText + w.techs[t];
+      }
+
+      // Sætter linket og styler hover effekten
+      link.innerText = w.link.name;
+      link.setAttribute("href", w.link.link);
+      link.style.backgroundImage = "linear-gradient(to right, transparent 50%, " + w.color + " 50%)";
+
+      console.log(link);
+      
+      container.appendChild(clone);
+    });
+    
   }
 }
 
-function portfolioElementClicked(n) {
-  //finder scroll offset fra toppen, da upperContentContainer skal glide ind midt på skærmen
-  var doc = document.documentElement;
-  var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-
-  upperContentContainer.style.display = "flex";
-  upperContentContainer.style.backgroundColor = "var(--portfolio-" + n + "-color)";
-  upperContentContainer.style.top = top + "px";
-  // upperContent.innerHTML = document.getElementById('portfolio-' + n).textContent;
-  upperContent.innerHTML = portfolioSubPages[n];
-  //her er man nødt til at sætte et minimalt delay på transform, ellers animeres det ikke
-  setTimeout(function(){
-    upperContentContainer.style.transform = "translate(0%, 0px)";
-  },10)
-
-  setTimeout(function(){
-    //fjerner indholdet på siden, så upperContentContainer er det eneste på skærmen
-    content.innerHTML = "";
-
-    //positionerer upperContentContainer i toppen af skærmen igen
-    upperContentContainer.style.top = "0";
-  },310)
-}
-
-function slideOutPortfolio(buttonClicked) {
-  if (buttonClicked) {
-    //tilføjer portfolio-siden igen
-    content.innerHTML = pages.portfolio;
-  }
-
-  var upper = document.getElementById('upperContentContainer');
-  upper.style.transform = "translate(100%, 0px)";
-  setTimeout(function(){
-    upper.style.display = "none";
-  },500)
-
-}
-
-//tilføjer funktioner til window så es6 modules virker:
-window.changePage = changePage;
-window.portfolioElementClicked = portfolioElementClicked;
-window.slideOutPortfolio = slideOutPortfolio;
-
+setSkills();
+setWorks();

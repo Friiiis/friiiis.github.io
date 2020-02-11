@@ -2,15 +2,36 @@
   #SETTINGS
 \*------------------------------------*/
 
+@font-face {
+	font-family: LouisGeorgeCafe;
+	src:url("/assets/fonts/Louis\ George\ Cafe.ttf");
+}
+
+@font-face {
+	font-family: LouisGeorgeCafe-bold;
+	src:url("/assets/fonts/Louis\ George\ Cafe\ Bold.ttf");
+}
+
+@font-face {
+	font-family: LouisGeorgeCafe-light;
+	src:url("/assets/fonts/Louis\ George\ Cafe\ Light.ttf");
+}
+
+@font-face {
+	font-family: HeyOctober;
+	src:url("/assets/fonts/Hey_October.ttf");
+}
+
 :root {
 	/**
      * #COLORS
      */
-	--main-font-color: #414141;
+	--main-font-color: #fbfbfb;
 	--main-white-color: #fbfbfb;
+	--main-black-color: #111111;
 
 	--background-color: var(--main-font-color);
-  	--accent-color: rgb(235, 177, 32);
+  	--accent-color: crimson;
 
 	--box-shadow-color: var(--box-shadow-dark);
 
@@ -20,7 +41,8 @@
 	/**
      * #FONTS
      */
-	--main-font:      'Open Sans', sans-serif;
+	--main-font:      'LouisGeorgeCafe', sans-serif;
+	--main-font-bold:      'LouisGeorgeCafe-bold', sans-serif;
 	--secondary-font: 'Ubuntu', sans-serif; /*Headings*/
 
 	--font-size-large:  42px;
@@ -36,12 +58,4 @@
 
   --input-field-height: 20px;
 
-	/*
-	* #PORTFOLIO COLORS
-	*/
-	--portfolio-portfolio-color: var(--accent-color);
-	--portfolio-mettelineM-color: #1a9f49;
-	--portfolio-savedPostsOrganizer-color: #EF452C;
-	--portfolio-bottomNav-color: #9cc7dc;
-	--portfolio-mikkeller-color: rgb(103, 184, 119);
 }

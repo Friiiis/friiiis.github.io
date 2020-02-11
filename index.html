@@ -1,72 +1,191 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
-    <!-- Meta tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta charset="UTF-8">
-    <meta name="description" content="Gustav Friis-Hansen - Portfolio">
-    <meta name="keywords" content="Portfolio">
-    <meta name="author" content="Gustav Friis-Hansen">
-    <!-- HTML metadata; her angives titlen, ligesom Google Fonts og forskellige CSS filer importeres. -->
-    <title>Gustav Friis-Hansen - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="images/logo/favicon.png"/>
+  <!-- Meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta charset="UTF-8">
+  <meta name="description" content="Gustav Friis-Hansen - Portfolio">
+  <meta name="keywords" content="Portfolio">
+  <meta name="author" content="Gustav Friis-Hansen">
+  <!-- HTML metadata; her angives titlen, ligesom Google Fonts og forskellige CSS filer importeres. -->
+  <title>Gustav Friis-Hansen - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="images/logo/favicon.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
+
 <body>
-<main>
-  <div class="contentContainer" id="contentContainer"></div>
+  <main>
+    <div class="gradient-background">
 
-  <div class="contentContainer" id="upperContentContainer">
-    <div class="slideOutPortfolio" onclick="slideOutPortfolio(true)">
-      <i class="fas fa-chevron-right"></i>
-      <p>BACK</p>
-    </div>
-    <div class="portfolioElementContainer" id="upperContent"></div>
-  </div>
+      <!-- forside -->
+      <div class="row d-flex flex-row align-items-center justify-content-center" id="front-page" style="height: 100vh;">
 
-  <div class="menuContainer" id="menuContainerFullWidth">
-    <div class="headerContainer">
-      <span>
-        <div class="logoContainer" onclick="changePage('home')">
-          <?xml version="1.0" encoding="utf-8"?>
-          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 viewBox="0 0 500 500" class="logo" xml:space="preserve">
-            <g>
-            	<path class="logoFill" d="M250.1,494.9c-62.7,0-125.4-23.9-173.1-71.6C30.7,377.1,5.2,315.6,5.2,250.2c0-19.3,15.7-35,35-35
-            		s35,15.7,35,35c0,46.7,18.2,90.6,51.2,123.6c33,33,76.9,51.2,123.6,51.2c46.7,0,90.6-18.2,123.6-51.2
-            		c59.7-59.7,67.1-152.2,22.3-220L274.8,274.9c-13.7,13.7-35.8,13.7-49.5,0c-13.7-13.7-13.7-35.8,0-49.5L373.7,77.1
-            		c13.7-13.7,35.8-13.7,49.5,0c95.5,95.5,95.5,250.8,0,346.3C375.5,471.1,312.8,494.9,250.1,494.9z"/>
-            </g>
-          </svg>
+        <div
+          class="col-12 col-sm-6 d-flex flex-column align-items-center justify-content-center text-center front-page front-page-left">
+          <h1 class="name-header">Gustav</h1>
+          <h1 class="name-header">Friis-Hansen</h1>
         </div>
-      </span>
-      <h1 class="name" id="name">GUSTAV FRIIS-HANSEN</h1>
+
+        <div
+          class="col-12 col-sm-6 p-5 d-flex flex-column align-items-center justify-content-center text-center front-page front-page-right">
+          <h3>Student and full stack developer</h3>
+          <p>Hi, my name is Gustav and I'm a developer. I currently study
+            <a href="https://www.itu.dk/uddannelser/bacheloruddannelser/softwareudvikling" target="_blank">Software
+              Development</a>
+            at the IT University of Copenhagen and work as a frontend developer at
+            <a href="https://kvalifik.dk/" target="_blank">Kvalifik Studio</a>. I have experience in several
+            programming languages and frameworks and I enjoy picking up new skills.
+          </p>
+          <nav>
+            <a href="#skills-page">Skills</a>
+            ・
+            <a href="#works-page">Work</a>
+          </nav>
+          <div>
+            <a href="https://github.com/Friiiis" target="_blank" class="so-me-links">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-github">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/gustav-friis-hansen-61351216b/" target="_blank" class="so-me-links">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-linkedin">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="mailto:friisdeveloper@gmail.com" target="_blank" class="so-me-links">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-mail">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- skills -->
+      <div class="row d-flex flex-row flex-sm-row-reverse align-items-center justify-content-center" id="skills-page"
+        style="height: 100vh;">
+
+        <div
+          class="col-12 col-sm-6 d-flex flex-column align-items-center justify-content-center text-center skills-page skills-page-left">
+          <h1 class="name-header" style="margin-top: 25px;">Skills</h1>
+        </div>
+
+        <div
+          class="col-12 col-sm-6 p-5 d-flex flex-column align-items-center justify-content-center skills-page skills-page-right">
+          <div class="row d-flex flex-row justify-content-center">
+
+            <div class="col-6 skills-container" id="languages-container">
+              <h3>Languages</h3>
+            </div>
+
+            <div class="col-6 skills-container" id="frameworks-container">
+              <h3>Frameworks</h3>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- works -->
+      <!-- https://www.w3schools.com/bootstrap/bootstrap_collapse.asp -->
+      <div class="works-container" id="works-page">
+
+        <div class="container">
+          <div class="row-12 text-center">
+            <h1 class="name-header works-header">Work</h1>
+          </div>
+          <div class="row justify-content-center" id="all-work-container">
+            <!-- HER INDSÆTTES ALLE "WORKS". Template nedenfor bruges. -->
+          </div>
+        </div>
+
+        <template id="work-block">
+          <div class="col-12 col-sm-6 col-lg-4 work-container">
+            <div type="button" data-toggle="collapse" data-target="#testcollapse" class="work-button" id="work-button">
+              <img src="/assets/images/saved_posts_organizer.jpg" class="work-image" id="work-image"/>
+              <h3 class="work-title-below-image" id="work-title-01">Reddit Saved Posts Organizer</h3>
+            </div>
+            <div id="testcollapse" class="collapse">
+              <div class="work-content">
+                <h3 id="work-title-02">Reddit Saved Posts Organizer</h3>
+                <h5 id="work-type">Personal project</h5>
+                <p id="work-description">A browser extension for Chrome and Firefox that loads the user's saved posts from reddit and lets them organize their posts in folders.</p>
+                <p style="font-size: 13px;" id="work-techs">HTML / CSS・JavaScript・WebExtensions API</p>
+                <a href="https://github.com/Friiiis/saved-posts-organizer" target="_blank" id="work-link" class="work-link">GITHUB</a>
+              </div>
+            </div>
+          </div>
+        </template>
+
+      </div>
+
+      <footer>
+        <div>
+          <a href="https://github.com/Friiiis" target="_blank" class="so-me-links">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-github">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/gustav-friis-hansen-61351216b/" target="_blank" class="so-me-links">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-linkedin">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:friisdeveloper@gmail.com" target="_blank" class="so-me-links">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-mail">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </footer>
+  
     </div>
 
-    <nav class="menuLinks">
-      <a onclick="changePage('home')"><span>Home</span></a>
-      <a onclick="changePage('portfolio')"><span>Portfolio</span></a>
-      <a onclick="changePage('about')"><span>About</span></a>
-    </nav>
-
-    <div class="iconContainer" id="iconContainer">
-      <a class="icon" href="https://github.com/Friiiis" target="_blank"><i class="fab fa-github"></i></a>
-      <a class="icon" href="https://www.linkedin.com/in/gustav-friis-hansen-61351216b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a class="icon" href="mailto:friisdeveloper@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-
-    <noscript>Your browser does not support JavaScript. This application needs JavaScript enabled to show additional content.</noscript>
-
-  </div>
-
-  <!-- Reference til JavaScript filen -->
-  <script src="index.js" type="module"></script>
-
-</main>
+  </main>
 </body>
+
+<!-- External scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- Internal scripts -->
+<script src="index.js" type="module"></script>
+
 </html>

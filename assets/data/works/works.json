@@ -1,0 +1,73 @@
+{
+    "works":[
+        {
+            "id": "reddit_saved_posts",
+            "title": "Reddit Saved Posts Organizer",
+            "type": "Personal project",
+            "description": "A browser extension for Chrome and Firefox that loads the user's saved posts from reddit and lets you organize in folders.",
+            "image": "/assets/images/saved_posts_organizer.jpg",
+            "color": "#ef452c",
+            "fontColor": "white",
+            "link": {
+                "name": "Github",
+                "link": "https://github.com/Friiiis/saved-posts-organizer"
+            },
+            "techs": [
+                "HTML / CSS",
+                "JavaScript",
+                "WebExtensions API"
+            ]
+        },
+        {
+            "id": "mikkeller_prototype",
+            "title": "Mikkeller prototype challenge",
+            "type": "Hackathon",
+            "description": "10 hours of programming resulting in a high fidelity prototype of an app made to the Danish beer company Mikkeller.",
+            "image": "/assets/images/mikkeller_prototype.jpg",
+            "color": "#67b877",
+            "fontColor": "white",
+            "link": {
+                "name": "Github",
+                "link": "https://github.com/Friiiis/mikkeller"
+            },
+            "techs": [
+                "Dart",
+                "Flutter"
+            ]
+        },
+        {
+            "id": "slide_to_confirm",
+            "title": "Slide to confirm Flutter package",
+            "type": "Personal project",
+            "description": "A customizable slider that will activate a callback when the user slides it to 100%. This is a package for Flutter.",
+            "image": "/assets/images/slide_to_confirm.jpg",
+            "color": "#9bbbf3",
+            "fontColor": "white",
+            "link": {
+                "name": "Github",
+                "link": "https://github.com/Friiiis/slide_to_confirm"
+            },
+            "techs": [
+                "Dart",
+                "Flutter"
+            ]
+        },
+        {
+            "id": "minimalistic_bottom_nav",
+            "title": "Minimalistic bottom navigation Flutter package",
+            "type": "Personal project",
+            "description": "A minimalistic bottom navigation package for Flutter. It is highly customizable and features smooth animations.",
+            "image": "/assets/images/minimalistic_bottom_nav.jpg",
+            "color": "#fbc3c3",
+            "fontColor": "white",
+            "link": {
+                "name": "Github",
+                "link": "https://github.com/Friiiis/minimalistic_bottom_navigation"
+            },
+            "techs": [
+                "Dart",
+                "Flutter"
+            ]
+        }
+    ]
+}
